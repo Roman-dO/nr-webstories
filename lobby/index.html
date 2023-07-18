@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список игр</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="--audio-con">
+    </div>
+
+    <header>
+        <div class="f-con">
+            <div class="l-side"></div>
+            <div class="c-side"></div>
+            <div class="r-side">
+                <div id="sound-btn" class="on">
+                    <img src="../img/speaker.svg" alt="" class="on-icon">
+                    <img src="../img/speaker-off.svg" alt="" class="off-icon">
+                </div>
+                <div id="--notification-btn" class="on">
+                    <img src="../img/hamburger-menu.svg" alt="" class="icon">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="audio-placeholder"></div>
+    <button id="test-btn">Нажми на меня</button>
+    <script type="module">
+        import $ from '../core/libs/jquery.module.js';
+
+        $('#audio-placeholder').html(
+            '<audio' +
+            '        id="--audio-aoaoooo"' +
+            '        src="../audio/bg.mp3">' +
+            '        volume="10"' +
+            '    </audio>');
+
+        setTimeout(() => {
+            $('#--audio-aoaoooo')[0].volume = .1;
+        })
+
+
+        $('#test-btn').click(() => {
+            const audio = $('#--audio-aoaoooo')[0];
+            if (!audio.paused) {
+                audio.pause();
+            }
+            else {
+                audio.play()
+            }
+
+        })
+
+    </script>
+
+</body>
+</html>

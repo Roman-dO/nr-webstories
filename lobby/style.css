@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+}
+body {
+    overflow: hidden;
+}
+
+header {
+    height: 30px;
+    width: 100%;
+
+    background-color: #252525;
+
+    border-bottom: #1c1c1c 3px solid;
+}
+.f-con {
+    height: 100%;
+    width: 90vw;
+
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+}
+header .f-con .r-side {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 5px;
+}
+header #mute-btn {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header #mute-btn > * {
+    display: none;
+}
+header #mute-btn.on > .on-icon {
+    display: block;
+}
+header #mute-btn.off > .off-icon {
+    display: block;
+}
+header #mute-btn img {
+    height: 80%;
+    aspect-ratio: 1/1;
+}
+
+header #--notification-btn {
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    position: relative;
+}
+header #--notification-btn > img {
+    height: 80%;
+
+    left: 10%;
+    top: 10%;
+
+    position: absolute;
+}
+
+
